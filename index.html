@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local storage student task</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header text-white p-4 mb-4">
+      <h2>Student Task Using LS</h2>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card">
+            <div class="card-body bg-clr">
+              <form id="stdform">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" required id="fname" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" required id="lname" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" required id="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="contact">Contact</label>
+                  <input
+                    type="text"
+                    required
+                    id="contact"
+                    class="form-control"
+                  />
+                </div>
+
+                <p class="alert alert-warning d-none" id="maxupdatetime">
+                  you can update todo items for 5 times only
+                </p>
+                <div>
+                  <button
+                    class="btn bg-purple btn-sm btn-block"
+                    type="submit"
+                    id="submitbtn"
+                  >
+                    Add student
+                  </button>
+                  <button
+                    class="btn btn-outline-primary btn-sm btn-block d-none"
+                    type="button"
+                    id="updatebtn"
+                  >
+                    Update student
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="table-responsive">
+          <table class="table table-bordered text-white font-weight-bold bg-clr text-center">
+            <thead>
+              <tr>
+                <th>Sr.No.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="stdcontainer"></tbody>
+          </table>
+          <p class="alert alert-warning d-none" id="nostd">
+            No student data is added yet.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
